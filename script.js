@@ -72,3 +72,28 @@ function isPalindrome(str) {
 
   return true;
 }
+
+function countEvens(arr) {
+  let count = 0;
+
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+function sumDigits(num) {
+  let digit = 0;
+  let sum = 0;
+
+  while (num > 0) {
+    digit = num % 10;
+    sum += digit;
+    num = Math.floor(num / 10);
+  }
+
+  return sum;
+}
