@@ -97,3 +97,24 @@ function sumDigits(num) {
 
   return sum;
 }
+
+// create the function
+// loop through characters
+
+function firstNonRepeatingChar(str) {
+  let count = {};
+
+  for (let ch of str) {
+    count[ch] = (count[ch] || 0) + 1;
+  }
+
+  for (let ch of str) {
+    if (count[ch] === 1) {
+      return ch;
+    }
+  }
+
+  return '_';
+}
+
+console.log(firstNonRepeatingChar('programming'));
