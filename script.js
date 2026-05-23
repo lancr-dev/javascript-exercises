@@ -117,4 +117,30 @@ function firstNonRepeatingChar(str) {
   return '_';
 }
 
-console.log(firstNonRepeatingChar('programming'));
+function countCharacters(str) {
+  let count = {};
+
+  for (let ch of str) {
+    count[ch] = (count[ch] || 0) + 1;
+  }
+
+  return count;
+}
+
+console.log(countCharacters('aabbcc'));
+
+function findMissingNumber(arr) {
+  let sum = 0;
+  let n = arr.length + 1;
+  let expectedTotal = 0;
+  let missingNumber = 0;
+
+  for (let num of arr) {
+    sum += num;
+  }
+
+  expectedTotal = (n * (n + 1)) / 2;
+  missingNumber = expectedTotal - sum;
+
+  return missingNumber;
+}
