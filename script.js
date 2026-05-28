@@ -98,9 +98,6 @@ function sumDigits(num) {
   return sum;
 }
 
-// create the function
-// loop through characters
-
 function firstNonRepeatingChar(str) {
   let count = {};
 
@@ -127,8 +124,6 @@ function countCharacters(str) {
   return count;
 }
 
-console.log(countCharacters('aabbcc'));
-
 function findMissingNumber(arr) {
   let sum = 0;
   let n = arr.length + 1;
@@ -143,4 +138,29 @@ function findMissingNumber(arr) {
   missingNumber = expectedTotal - sum;
 
   return missingNumber;
+}
+
+function rotateArray(arr, rotation) {
+  for (let i = 0; i < rotation; i++) {
+    let lastValue = arr.pop();
+    arr.unshift(lastValue);
+  }
+
+  return arr;
+}
+
+function findDuplicates(arr) {
+  let numbers = {};
+  let duplicatedArray = [];
+
+  for (let num of arr) {
+    numbers[num] = (numbers[num] || 0) + 1;
+    if (numbers[num] === 2) {
+      duplicatedArray.push(num);
+    }
+  }
+
+  duplicatedArray.sort((a, b) => a - b);
+
+  return duplicatedArray;
 }
