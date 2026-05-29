@@ -164,3 +164,49 @@ function findDuplicates(arr) {
 
   return duplicatedArray;
 }
+
+function moveZeroes(arr) {
+  let newArray = [];
+
+  for (let num of arr) {
+    if (num !== 0) {
+      newArray.push(num);
+    }
+  }
+
+  for (let num of arr) {
+    if (num === 0) {
+      newArray.push(num);
+    }
+  }
+
+  return newArray;
+}
+
+function findPair(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+
+  return newArray;
+}
+
+function findPairsOfSum(arr, target) {
+  let newArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      let sum = arr[i] + arr[j];
+      if (arr[i] + arr[j] === target) {
+        newArray.push(arr[i]);
+        newArray.push(arr[j]);
+      }
+    }
+  }
+
+  return newArray;
+}
